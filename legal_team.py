@@ -87,7 +87,7 @@ with st.sidebar:
     if api_key:
         st.success("OpenRouter API key configured from environment.")
     else:
-        st.warning("Set OPENROUTER_API_KEY to enable upload and analysis.")
+        st.warning("Set OPENROUTER_API_KEY in environment to enable upload and analysis.")
 
 
     chunk_size_in = st.sidebar.number_input("Chunk Size", min_value=1, max_value=5000, value=1000)
@@ -102,7 +102,7 @@ with st.sidebar:
             with st.spinner("Processing document..."):
                 try:
                     if not api_key:
-                        st.error("Please enter your OpenRouter API key before uploading a file.")
+                        st.error("Missing OPENROUTER_API_KEY environment variable.")
                         st.stop()
 
                     if st.session_state.validated_api_key != api_key:
