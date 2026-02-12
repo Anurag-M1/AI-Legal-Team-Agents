@@ -15,11 +15,12 @@ from agno.knowledge.chunking.document import DocumentChunking
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 OPENROUTER_MODEL_ID = "qwen/qwen3-coder"
 OPENROUTER_EMBEDDING_MODEL_ID = "openai/text-embedding-3-small"
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
-api_key = OPENROUTER_API_KEY
-os.environ["OPENROUTER_API_KEY"] = api_key
-os.environ["OPENAI_API_KEY"] = api_key
+api_key = OPENROUTER_API_KEY.strip()
+if api_key:
+    os.environ["OPENROUTER_API_KEY"] = api_key
+    os.environ["OPENAI_API_KEY"] = api_key
 
 
 def is_openrouter_auth_error(error: Exception) -> bool:
@@ -83,7 +84,10 @@ with st.sidebar:
 
     # Set a title for the sidebar
     st.header("Configuration")
-    st.success("OpenRouter API key configured.")
+    if api_key:
+        st.success("OpenRouter API key configured from environment.")
+    else:
+        st.warning("Set OPENROUTER_API_KEY to enable upload and analysis.")
 
 
     chunk_size_in = st.sidebar.number_input("Chunk Size", min_value=1, max_value=5000, value=1000)
