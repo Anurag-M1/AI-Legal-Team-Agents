@@ -10,29 +10,6 @@ It uses a multi-agent workflow (`LegalAdvisor`, `ContractAnalyst`, `LegalStrateg
 
 <img width="1446" height="791" alt="ALTA" src="https://github.com/user-attachments/assets/850e526d-e219-4dee-9a2d-095fbe84f571" />
 
-## Deploy on Render
-
-This repo includes `render.yaml` for one-click Blueprint deploy.
-
-### Option A: Blueprint Deploy (recommended)
-
-1. Push this repo to GitHub.
-2. In Render, go to **New +** -> **Blueprint**.
-3. Select this repository.
-4. Set required environment variable:
-   - `OPENROUTER_API_KEY`
-5. Deploy.
-
-### Option B: Manual Web Service
-
-1. In Render, create **New Web Service** from this repo.
-2. Use:
-   - Build Command: `pip install -r requirements.txt`
-   - Start Command: `streamlit run legal_team.py --server.port $PORT --server.address 0.0.0.0`
-3. Add env var:
-   - `OPENROUTER_API_KEY`
-4. Deploy.
-
 ## Local Run
 
 ```bash
