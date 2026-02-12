@@ -8,6 +8,8 @@ AI-powered legal analysis system built with multiple specialized agents for:
 
 Upload a legal PDF, process it into a knowledge base, and get a structured legal report with key points and recommendations.
 
+<img width="1446" height="791" alt="ALTA" src="https://github.com/user-attachments/assets/850e526d-e219-4dee-9a2d-095fbe84f571" />
+
 ## Features
 
 - Multi-agent workflow:
@@ -102,11 +104,5 @@ This project provides AI-assisted legal analysis for educational and productivit
 
 **Anurag Kumar Singh**
 
-- GitHub: [github.com/anurag-m1](https://github.com/anurag-m1)
-- Instagram: [instagram.com/ca_anuragsingh](https://instagram.com/ca_anuragsingh)
-
-## Credits
-
-UI footer and project credits:
 - GitHub: [github.com/anurag-m1](https://github.com/anurag-m1)
 - Instagram: [instagram.com/ca_anuragsingh](https://instagram.com/ca_anuragsingh)
