@@ -5,6 +5,7 @@ AI-powered legal analysis app for:
 - legal research
 - risk assessment
 - compliance checks
+- live : https://ai-legal-team-agents.onrender.com
 
 It uses a multi-agent workflow (`LegalAdvisor`, `ContractAnalyst`, `LegalStrategist`, `Team Lead`) with OpenRouter (`qwen/qwen3-coder`).
 
